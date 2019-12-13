@@ -1,0 +1,40 @@
+
+@mixin allBrowser($property: '', $value: ''){
+	-webkit-#{$property}: #{$value};
+	   -moz-#{$property}: #{$value};
+	    -ms-#{$property}: #{$value};
+	     -o-#{$property}: #{$value};
+	     -s-#{$property}: #{$value};
+	        #{$property}: #{$value};
+}
+
+
+@mixin display($property){
+	display: -webkit-#{$property};
+	display: -moz-#{$property};
+	display: -ms-#{$property};
+	display: -o-#{$property};
+	display: #{$property};
+}
+
+@mixin background($color: '', $img: '', $position: '', $size: '', $repeat: ''){
+	@if (#{$color} != ''){
+		background-color: #{$color};
+	}
+
+	@if ($img != ''){
+		background-image: url($img);
+	}
+
+	@if (#{$position} != ''){
+		background-position: #{$position};
+	}
+
+	@if (#{$size} != ''){
+		background-size: #{$size};
+	}
+
+	@if (#{$repeat} != ''){
+		background-repeat: #{$repeat};
+	}
+}

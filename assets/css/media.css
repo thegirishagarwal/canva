@@ -1,0 +1,71 @@
+.custom-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; }
+.custom-scroll::-webkit-scrollbar-track {
+  border-radius: 4px; }
+.custom-scroll::-webkit-scrollbar-thumb {
+  visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 4px; }
+.custom-scroll:hover::-webkit-scrollbar-thumb {
+  visibility: visible; }
+
+@media (max-width: 575px) {
+  #show-sidebar {
+    opacity: 1;
+    visibility: visible; }
+
+  #side-navbar {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    -s-transform: translateX(-100%);
+    transform: translateX(-100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99; }
+    #side-navbar .sidebar-container {
+      max-width: 360px;
+      width: calc(100vw - 50px); }
+    #side-navbar.open-sidebar {
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
+      -s-transform: translateX(0);
+      transform: translateX(0); }
+      #side-navbar.open-sidebar .navbar-before {
+        max-width: 360px;
+        width: calc(100vw - 50px); }
+    #side-navbar .close-sidebar {
+      display: none; }
+    #side-navbar .inner-sidebar .main-menu .menu-data-bg {
+      left: 56px; }
+    #side-navbar .inner-sidebar .main-menu .navbar-menu .inner-menu {
+      min-width: calc(64px);
+      max-width: calc(64px); }
+      #side-navbar .inner-sidebar .main-menu .navbar-menu .inner-menu .menu-nav .items-active .inner-active-items {
+        width: 56px;
+        height: 56px; }
+      #side-navbar .inner-sidebar .main-menu .navbar-menu .inner-menu .menu-nav ul li a {
+        width: 56px;
+        height: 56px; }
+        #side-navbar .inner-sidebar .main-menu .navbar-menu .inner-menu .menu-nav ul li a .menu-name {
+          display: none; }
+    #side-navbar .inner-sidebar .main-menu .main-menu-data {
+      min-width: auto; }
+      #side-navbar .inner-sidebar .main-menu .main-menu-data .menu-section .menu-item-box {
+        padding-left: 8px;
+        padding-right: 16px; }
+
+  .image-grids .image-captions {
+    opacity: 1;
+    visibility: visible; }
+
+  #createFolder_modal .close {
+    top: 20px;
+    right: 20px; } }
+
+/*# sourceMappingURL=media.css.map */

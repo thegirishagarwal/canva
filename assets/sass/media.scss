@@ -1,0 +1,88 @@
+@import '../import/mixin';
+@import '../import/classes';
+
+@media (max-width: 575px) {
+	#show-sidebar{
+		opacity: 1;
+		visibility: visible;
+	}
+
+	#side-navbar{
+		.sidebar-container{
+			max-width: 360px;
+			width: calc(100vw - 50px);
+		}
+		@include allBrowser($property: 'transform', $value: 'translateX(-100%)');
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 99;
+		&.open-sidebar{
+			@include allBrowser($property: 'transform', $value: 'translateX(0)');
+			.navbar-before{
+				max-width: 360px;
+				width: calc(100vw - 50px);
+			}
+		}
+		.close-sidebar{
+			display: none;
+		}
+		.inner-sidebar{
+			.main-menu{
+				.menu-data-bg{
+					left: 56px;
+				}
+				.navbar-menu{
+					.inner-menu{
+						min-width: calc(64px);
+    					max-width: calc(64px);
+						.menu-nav{
+							.items-active{
+								.inner-active-items{
+									width: 56px;
+									height: 56px;
+								}
+							}
+							ul{
+								li{
+									a{
+										width: 56px;
+										height: 56px;
+										.menu-name{
+											display: none;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				.main-menu-data{
+					min-width: auto;
+					.menu-section{
+						.menu-item-box{
+							padding-left: 8px;
+							padding-right: 16px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	.image-grids{
+		.image-captions{
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	
+	#createFolder_modal{
+		.close{
+			top: 20px;
+			right: 20px;
+		}
+	}
+
+}
